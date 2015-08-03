@@ -97,6 +97,9 @@ h1 {
 	left: 0;
 	margin: 0;
 	z-index: 1000;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
 	display: none;
 }
 
@@ -106,7 +109,7 @@ h1 {
 	position: relative;
 	height: auto;
 	width: 600px;
-	border-radius: 3px;
+	border-radius: 4px;
 	top: 15%;
 	margin: auto auto;
 	border: 1px solid rgba(0,0,0,0.1);
@@ -230,7 +233,7 @@ h2 {
 #count {
 	color: #f39c12;
 	font-weight: 700;
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 input {
@@ -318,4 +321,12 @@ ul.guessBox li {
 	width: 95%;
 	margin: 0.2em;
 	color: #fff;
+}
+
+#logo-hot {
+	color:#cc324b;
+}
+
+#logo-cold {
+	color:#11a8ab;
 }
