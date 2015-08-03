@@ -33,6 +33,8 @@ function newGame() {
 function checkPrevGuess(diff){
 	if(prevDiff > diff){
 		return "Getting Warmer!";
+	} else if(prevDiff === diff){
+		return "Same Temp";
 	}
 	return "Getting Colder...";
 }
@@ -60,8 +62,12 @@ function checkGuess(guess){
 	}
 
 	if(prevDiff !== 0){
-		prevFeedback = checkPrevGuess(diff);
-		$("#prevFeedback").text(prevFeedback);
+		if(diff !== 0){
+			prevFeedback = checkPrevGuess(diff);
+			$("#prevFeedback").text(prevFeedback);
+		} else {
+			$("#prevFeedback").text("Congratulations!");
+		}	
 	}
 
 	$("#feedback").text(feedback);
